@@ -1,77 +1,73 @@
 package com.weixin.maillistsynchronization.Model;
 
-
 public class Staff {
+    private String userid;
 
-  private String userid;
-  private String name;
-  private long department;
-  private String mobile;
-  private long gender;
-  private String email;
-  private String position;
+    private String name;
 
+    private Integer department;
 
-  public String getUserid() {
-    return userid;
-  }
+    private String mobile;
 
-  public void setUserid(String userid) {
-    this.userid = userid;
-  }
+    private String gender;
 
+    private String email;
 
-  public String getName() {
-    return name;
-  }
+    private String position;
 
-  public void setName(String name) {
-    this.name = name;
-  }
+    public String getUserid() {
+        return userid;
+    }
 
+    public void setUserid(String userid) {
+        this.userid = userid == null ? null : userid.trim();
+    }
 
-  public long getDepartment() {
-    return department;
-  }
+    public String getName() {
+        return name;
+    }
 
-  public void setDepartment(long department) {
-    this.department = department;
-  }
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
+    }
 
+    public Integer getDepartment() {
+        return department;
+    }
 
-  public String getMobile() {
-    return mobile;
-  }
+    public void setDepartment(Integer department) {
+        this.department = department;
+    }
 
-  public void setMobile(String mobile) {
-    this.mobile = mobile;
-  }
+    public String getMobile() {
+        return mobile;
+    }
 
+    public void setMobile(String mobile) {
+        this.mobile = mobile == null ? null : mobile.trim();
+    }
 
-  public long getGender() {
-    return gender;
-  }
+    public String getGender() {
+        return gender;
+    }
 
-  public void setGender(long gender) {
-    this.gender = gender;
-  }
+    public void setGender(String gender) {
+        this.gender = gender == null ? null : gender.trim();
+    }
 
+    public String getEmail() {
+        return email;
+    }
 
-  public String getEmail() {
-    return email;
-  }
+    public void setEmail(String email) {
+        this.email = email == null ? null : email.trim();
+    }
 
-  public void setEmail(String email) {
-    this.email = email;
-  }
+    public String getPosition() {
+        return position;
+    }
 
-
-  public String getPosition() {
-    return position;
-  }
-
-  public void setPosition(String position) {
-    this.position = position;
-  }
-
+    public void setPosition(String position) {
+        this.position = position == null ? null : position.trim();
+    }
 }

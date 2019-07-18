@@ -1,37 +1,33 @@
 package com.weixin.maillistsynchronization.Model;
 
-
 public class Department {
+    private Integer id;
 
-  private long id;
-  private String name;
-  private long parentid;
+    private String name;
 
+    private Integer parentid;
 
-  public long getId() {
-    return id;
-  }
+    public Integer getId() {
+        return id;
+    }
 
-  public void setId(long id) {
-    this.id = id;
-  }
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
+    public String getName() {
+        return name;
+    }
 
-  public String getName() {
-    return name;
-  }
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
+    }
 
-  public void setName(String name) {
-    this.name = name;
-  }
+    public Integer getParentid() {
+        return parentid;
+    }
 
-
-  public long getParentid() {
-    return parentid;
-  }
-
-  public void setParentid(long parentid) {
-    this.parentid = parentid;
-  }
-
+    public void setParentid(Integer parentid) {
+        this.parentid = parentid;
+    }
 }

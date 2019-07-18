@@ -1,10 +1,6 @@
 package com.weixin.maillistsynchronization.Service;
 
 import com.weixin.maillistsynchronization.Model.Department;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
@@ -17,15 +13,25 @@ public interface DepartmentService {
      * 查询整个部门树
      */
     List<Department> queryAll();
+
     /**
-     * 按ParentID查询
-     * 或者说查询该部门的直接下级部门
+     * 查询该部门的直接上级部门
+     * 输入该部门的parentId
      */
-    List<Department> queryByParentId(long id);
+    List<Department> queryParentDepartment(Department department);
+    /**
+     * 查询该部门的直接下级部门
+     * 输入该部门的Id
+     */
+    List<Department> querySonDepartment(Department department);
     /**
      * 按ID查询
      */
-    List<Department> queryById(long id);
+    List<Department> queryById(Integer id);
+    /**
+     * 按ParentID查询
+     */
+    List<Department> queryByParentId(Integer parentId);
     /**
      * 按部门名称查询
      */
@@ -33,17 +39,23 @@ public interface DepartmentService {
     /**
      * 根据ID删除该部门
      */
-    int deleteById(long id);
+    int deleteById(Integer id);
     /**
      * 根据ParentID删除该部门
      */
-    int deleteByParentId(long id);
+    int deleteByParentId(Integer id);
     /**
      * 根据学生ID更新部门信息
      */
     int update(Department student);
     /**
      * 查询该部门的所有下级部门
+     * 输入该部门的id
      */
-    List<Department> queryAll();
+    List<Department> queryAllSonDepartment(Department department);
+    /**
+     * 查询该部门的所有上级级部门
+     * 输入该部门的parentId
+     */
+    List<Department> queryAllParentDepartment(Department department);
 }
